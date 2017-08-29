@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript"></script>
 <title>World Bank</title>
 </head>
 <body>
@@ -13,16 +14,21 @@
 	<table style="width: 50%;">
 		<tbody>
 			<tr>
-				<td>Country: </td>
-				<td>ISO Code: </td>
+				<td><label><spring:message code="worldbank.country" />: </label></td>
+				<td><label><spring:message code="worldbank.isocode" />: </label> </td>
 			</tr>
 			<tr>
-				<td><form:input path="country" /></td>
-				<td><form:input path="isoCode" /></td>
+				<%-- <td><form:input path="country"	 /></td>
+				<td><form:input path="isoCode" name="isoCode"/></td> --%>
+
+				<td><input path="country"	 /></td>
+				<td><input path="isoCode" name="isoCode"/></td>
 			</tr>
 		</tbody>
 	</table>
-	<button type="submit" value="worldbank">World Bank Data</button>
+	<br>
+	<button type="submit" value="worldbank.html">World Bank Data</button>
+	Language : <a href="?lang=en">English</a>|<a href="?lang=fr">French</a>
 </form:form>
 </body>
 </html>
